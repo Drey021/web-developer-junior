@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Criar Novo Post</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Criar Novo Post</h2>
+    <form id="postForm">
+      <input type="text" id="title" placeholder="Título" required />
+      <input type="text" id="image" placeholder="URL da Imagem" required />
+      <textarea id="description" placeholder="Descrição em HTML" required></textarea>
+      <button type="submit">Salvar</button>
+    </form>
+    <a href="home.html" class="btn">Voltar</a>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    checkLogin();
+
+    document.getElementById('postForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const posts = JSON.parse(localStorage.getItem('posts') || '[]');
+
+      posts.push({
+        title: document.getElementById('title').value.trim(),
+        image: document.getElementById('image').value.trim(),
+        description: document.getElementById('description').value.trim()
+      });
+
+      localStorage.setItem('posts', JSON.stringify(posts));
+      window.location.href = 'home.html';
+    });
+  </script>
+</body>
+</html>
