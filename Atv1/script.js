@@ -22,7 +22,7 @@ function loadPosts() {
   posts.forEach((post, index) => {
     const div = document.createElement('div');
     div.innerHTML = `
-      <h3>${post.title}</h3>
+      <h3>${post.title}</h3><small>Data: ${post.date || "N/A"}</small>
       <img src="${post.image}" style="max-width:200px;" />
       <p>
         <a href="view-post.html?id=${index}">Visualizar</a> |

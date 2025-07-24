@@ -9,6 +9,7 @@
   <div class="container">
     <h2>Criar Novo Post</h2>
     <form id="postForm">
+      <input type="date" id="date" required />
       <input type="text" id="title" placeholder="Título" required />
       <input type="text" id="image" placeholder="URL da Imagem" required />
       <textarea id="description" placeholder="Descrição em HTML" required></textarea>
@@ -28,7 +29,8 @@
       posts.push({
         title: document.getElementById('title').value.trim(),
         image: document.getElementById('image').value.trim(),
-        description: document.getElementById('description').value.trim()
+        description: document.getElementById('description').value.trim(),
+        date: document.getElementById('date').value
       });
 
       localStorage.setItem('posts', JSON.stringify(posts));

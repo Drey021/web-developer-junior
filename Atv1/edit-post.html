@@ -9,6 +9,7 @@
   <div class="container">
     <h2>Editar Post</h2>
     <form id="editForm">
+      <input type="date" id="date" required />
       <input type="text" id="title" placeholder="Título" required />
       <input type="text" id="image" placeholder="URL da Imagem" required />
       <textarea id="description" placeholder="Descrição em HTML" required></textarea>
@@ -33,13 +34,15 @@
       document.getElementById('title').value = post.title;
       document.getElementById('image').value = post.image;
       document.getElementById('description').value = post.description;
+      document.getElementById('date').value = post.date || '';
 
       document.getElementById('editForm').addEventListener('submit', e => {
         e.preventDefault();
         posts[postId] = {
           title: document.getElementById('title').value.trim(),
           image: document.getElementById('image').value.trim(),
-          description: document.getElementById('description').value.trim()
+          description: document.getElementById('description').value.trim(),
+          date: document.getElementById('date').value
         };
         localStorage.setItem('posts', JSON.stringify(posts));
         window.location.href = 'home.html';

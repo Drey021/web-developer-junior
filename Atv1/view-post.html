@@ -23,7 +23,7 @@
       document.getElementById('postView').innerHTML += `
         <h2>${post.title}</h2>
         <img src="${post.image}" style="max-width:300px;" />
-        <div>${post.description}</div>
+        <p><strong>Data:</strong> ${post.date || "N/A"}</p><div>${post.description}</div>
         <p><a href="edit-post.html?id=${index}">Editar Post</a></p>
       `;
     } else {
