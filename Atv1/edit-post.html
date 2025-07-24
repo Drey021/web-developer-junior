@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Editar Post</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Editar Post</h2>
+    <form id="editForm">
+      <input type="text" id="title" placeholder="Título" required />
+      <input type="text" id="image" placeholder="URL da Imagem" required />
+      <textarea id="description" placeholder="Descrição em HTML" required></textarea>
+      <button type="submit">Salvar Alterações</button>
+    </form>
+    <a href="home.html" class="btn">Cancelar</a>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    checkLogin();
+
+    const params = new URLSearchParams(window.location.search);
+    const postId = parseInt(params.get('id'), 10);
+    const posts = JSON.parse(localStorage.getItem('posts') || '[]');
+    const post = posts[postId];
+
+    if (!post) {
+      alert('Post não encontrado.');
+      window.location.href = 'home.html';
+    } else {
+      document.getElementById('title').value = post.title;
+      document.getElementById('image').value = post.image;
+      document.getElementById('description').value = post.description;
+
+      document.getElementById('editForm').addEventListener('submit', e => {
+        e.preventDefault();
+        posts[postId] = {
+          title: document.getElementById('title').value.trim(),
+          image: document.getElementById('image').value.trim(),
+          description: document.getElementById('description').value.trim()
+        };
+        localStorage.setItem('posts', JSON.stringify(posts));
+        window.location.href = 'home.html';
+      });
+    }
+  </script>
+</body>
+</html>
