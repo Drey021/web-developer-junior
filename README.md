@@ -1,51 +1,54 @@
-# Web Developer Júnior – Avaliação Técnica
+# 🧑‍💻 web-developer-junior
 
-Este repositório contém a solução para a avaliação técnica da vaga de Desenvolvedor Web Júnior. O objetivo é demonstrar domínio nas tecnologias propostas por meio da criação de um gerenciador de posts para blog e sua respectiva interface pública.
+Projeto para avaliação técnica da vaga de **Desenvolvedor Web Júnior**.
+
+## 📌 Descrição
+
+Este repositório contém a implementação de um **gerenciador de posts de blog** e o **blog em si**, como parte do processo seletivo. A aplicação foi desenvolvida como um projeto **monolítico**, utilizando as tecnologias especificadas.
 
 ## 🚀 Tecnologias Utilizadas
 
-- **PHP** com o framework **CodeIgniter 4**
-- **Eloquent ORM** para abstração do banco de dados
-- **MySQL** como banco de dados relacional
-- **Bootstrap** para estilização e layout
-- **jQuery** para comportamentos dinâmicos no frontend
-- **Git** para versionamento de código
+- [CodeIgniter 4](https://codeigniter.com/) - Framework PHP
+- [Eloquent ORM](https://laravel.com/docs/eloquent) - ORM para acesso ao banco de dados
+- [MySQL](https://www.mysql.com/) - Banco de dados relacional
+- [Bootstrap](https://getbootstrap.com/) - Framework CSS
+- [jQuery](https://jquery.com/) - Manipulação de DOM e eventos
+- [Git](https://git-scm.com/) - Controle de versão
 
-## 📌 Atividades
+## 📂 Estrutura do Projeto
 
-### Atividade 1: Gerenciador de Posts (Admin)
+O projeto é monolítico, contendo tanto o front-end quanto o back-end no mesmo repositório. As funcionalidades foram divididas conforme solicitado:
 
-- [x] Implementar sistema de **autenticação (login)** para acesso ao painel administrativo
-- [x] CRUD completo de **posts de blog**
-  - Nome (título)
-  - Imagem (upload de foto)
-  - Descrição (conteúdo em HTML)
-- [x] Projeto **monolítico** (sem separação entre front e back)
+---
 
-### Atividade 2: Interface Pública do Blog
+## ✅ Atividade 1 — Gerenciador de Posts
 
-- [x] Tela de **listagem de posts**, com:
-  - Campo de busca por nome/título
-- [x] Tela de **detalhes de post**, exibindo nome, imagem e conteúdo formatado
+- Sistema de login para acesso ao painel
+- Cadastro de posts com os seguintes campos:
+  - **Nome**
+  - **Foto**
+  - **Descrição (com suporte a HTML)**
+- Listagem e gerenciamento dos posts cadastrados
+
+---
+
+## ✅ Atividade 2 — Blog Público
+
+- Tela de **listagem de posts**, com:
+  - Campo de busca por título ou palavra-chave
+- Tela de **detalhes do post**, exibindo todas as informações cadastradas
+
+---
 
 ## 🗃️ Banco de Dados
 
-- Utilizado MySQL
-- O diagrama do banco foi criado com **MySQL Workbench**
-- Estrutura composta por tabelas como `users`, `posts`, entre outras
+- Banco MySQL com modelo relacional
+- Diagrama ER gerado com MySQL Workbench e incluído no repositório  
+  Arquivo: `/docs/diagrama-er.png`
 
-> O arquivo `.sql` do banco e o diagrama em formato `.mwb` estão disponíveis na pasta `/database`.
+---
 
-## 🧪 Avaliação
-
-Serão avaliados:
-
-- Qualidade e organização do código
-- Estrutura do projeto
-- Uso adequado das tecnologias solicitadas
-- Boas práticas de desenvolvimento (nomes de variáveis, organização de pastas, etc.)
-
-## 📂 Como Rodar o Projeto
+## 📌 Instruções para rodar o projeto
 
 1. Clone o repositório:
    ```bash
