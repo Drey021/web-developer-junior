@@ -1,56 +1,79 @@
-# 🧑‍💻 web-developer-junior
+# Gerenciador de Posts - Blog Simples
 
-Projeto para avaliação técnica da vaga de **Desenvolvedor Web Júnior**.
-
-## 📌 Descrição
-
-Este repositório contém a implementação de um **gerenciador de posts de blog** e o **blog em si**, como parte do processo seletivo. A aplicação foi desenvolvida como um projeto **monolítico**, utilizando as tecnologias especificadas.
-
-## 🚀 Tecnologias Utilizadas
-
-- [CodeIgniter 4](https://codeigniter.com/) - Framework PHP
-- [Eloquent ORM](https://laravel.com/docs/eloquent) - ORM para acesso ao banco de dados
-- [MySQL](https://www.mysql.com/) - Banco de dados relacional
-- [Bootstrap](https://getbootstrap.com/) - Framework CSS
-- [jQuery](https://jquery.com/) - Manipulação de DOM e eventos
-- [Git](https://git-scm.com/) - Controle de versão
-
-## 📂 Estrutura do Projeto
-
-O projeto é monolítico, contendo tanto o front-end quanto o back-end no mesmo repositório. As funcionalidades foram divididas conforme solicitado:
+Um projeto simples de gerenciador de posts para blog, feito com HTML, CSS e JavaScript puro, usando **localStorage** para salvar os dados no navegador. Ideal para estudos e pequenos projetos sem backend.
 
 ---
 
-## ✅ Atividade 1 — Gerenciador de Posts
+## Funcionalidades
 
-- Sistema de login para acesso ao painel
-- Cadastro de posts com os seguintes campos:
-  - **Nome**
-  - **Foto**
-  - **Descrição (com suporte a HTML)**
-- Listagem e gerenciamento dos posts cadastrados
-
----
-
-## ✅ Atividade 2 — Blog Público
-
-- Tela de **listagem de posts**, com:
-  - Campo de busca por título ou palavra-chave
-- Tela de **detalhes do post**, exibindo todas as informações cadastradas
+- Login simples (usuário fixo: `admin` / senha: `1234`).
+- Criação, edição e exclusão de posts.
+- Listagem de posts na área de gerenciamento.
+- Busca de posts na página pública.
+- Visualização detalhada do post.
+- Proteção simples das páginas administrativas via login.
+- Armazenamento dos posts no `localStorage`.
 
 ---
 
-## 🗃️ Banco de Dados
+## Tecnologias
 
-- Banco MySQL com modelo relacional
-- Diagrama ER gerado com MySQL Workbench e incluído no repositório  
-  Arquivo: `/docs/diagrama-er.png`
+- HTML5
+- CSS3 (customizado e responsivo)
+- JavaScript (ES6+)
+- `localStorage` para persistência de dados
 
 ---
 
-## 📌 Instruções para rodar o projeto
+## Estrutura do Projeto
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/web-developer-junior.git
-   cd web-developer-junior
+BLOG
+├── blog.html # Página pública do blog (listar posts)
+├── login.html # Tela de login
+├── gerenciar-posts.html# Área administrativa (listar, editar, excluir)
+├── criar-post.html # Formulário para criar novo post
+├── editar-post.html # Formulário para editar post existente
+├── post.html # Detalhes de um post específico
+├── style.css # Estilos principais (responsivo e moderno)
+└── script.js # Lógica em JavaScript (login, CRUD, busca)
+
+
+---
+
+## Como usar
+
+1. Abra `login.html` e entre com:  
+   - **Usuário:** admin  
+   - **Senha:** 1234
+
+2. Após logar, você pode criar, editar e excluir posts na área administrativa.
+
+3. Acesse `blog.html` para visualizar os posts publicamente e usar a busca.
+
+4. Clique em um post para ver os detalhes.
+
+---
+
+## Considerações
+
+- Projeto simples, sem backend real — dados ficam no navegador via `localStorage`.
+- Senha fixa e simples aqui apenas para fins educacionais.
+- 
+---
+
+## Melhorias Futuras
+
+- Autenticação com backend e banco real (ex: MySQL).
+- Upload de imagens (em vez de URLs).
+- Editor WYSIWYG para a descrição do post.
+- Sistema de permissões de usuário.
+- Design responsivo avançado e mobile-first.
+- Validações e feedbacks mais robustos.
+
+---
+
+## Autor
+
+[Andrey S Soares]
+
+---
