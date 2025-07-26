@@ -1,0 +1,228 @@
+/* ===== Reset básico ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ===== Corpo da página ===== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fafafa;
+  margin: 0;
+  padding: 0;
+  color: #444;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== Container central ===== */
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.container:focus-within {
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.3);
+}
+
+/* ===== Cabeçalhos ===== */
+h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  user-select: none;
+}
+
+/* ===== Formulários ===== */
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #2c3e50;
+  user-select: none;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  resize: vertical;
+  background-color: #fff;
+  color: #333;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+  background-color: #fefefe;
+}
+
+/* ===== Botões ===== */
+button {
+  padding: 12px 28px;
+  background-color: #3498db;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(52, 152, 219, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+button:hover,
+button:focus {
+  background-color: #2980b9;
+  box-shadow: 0 5px 10px rgba(41, 128, 185, 0.6);
+  outline: none;
+}
+
+/* ===== Listas ===== */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background: #f9f9f9;
+  margin: 12px 0;
+  padding: 14px 18px;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.2s ease;
+  cursor: default;
+}
+
+li:hover {
+  background-color: #eaf6ff;
+}
+
+/* ===== Links ===== */
+a {
+  color: #3498db;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  user-select: text;
+}
+
+a:hover,
+a:focus {
+  color: #216eab;
+  text-decoration: underline;
+  outline: none;
+}
+
+/* ===== Ações do Gerenciador ===== */
+.acoes-gerenciador {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.botao-link {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  user-select: none;
+}
+
+.botao-link:hover,
+.botao-link:focus {
+  background-color: #2980b9;
+  outline: none;
+}
+
+/* ===== Parágrafos e texto especial ===== */
+p strong {
+  font-weight: 700;
+}
+
+p code {
+  background-color: #f4f4f4;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  color: #555;
+  user-select: text;
+}
+
+/* ===== Article e conteúdo do post ===== */
+article#post-detalhe {
+  margin-bottom: 20px;
+}
+
+article#post-detalhe h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  user-select: text;
+}
+
+article#post-detalhe img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+}
+
+article#post-detalhe div {
+  color: #555;
+  line-height: 1.5;
+  font-size: 1rem;
+  user-select: text;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 768px) {
+  .container {
+    margin: 20px 15px;
+    padding: 25px 20px;
+  }
+
+  button, .botao-link {
+    width: 100%;
+    text-align: center;
+  }
+
+  .acoes-gerenciador {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

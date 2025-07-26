@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gerenciar Posts</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="carregarPosts()">
+  <main class="container" role="main" aria-labelledby="titulo-pagina">
+    <h2 id="titulo-pagina">Gerenciador de Posts</h2>
+
+    <nav aria-label="Ações do gerenciador" class="acoes-gerenciador" role="navigation">
+      <a href="criar-post.html" class="botao-link">+ Criar novo post</a>
+      <a href="blog.html" class="botao-link">Ver blog público</a>
+      <a href="login.html" onclick="logout()" class="botao-link">Sair</a>
+    </nav>
+
+    <ul id="lista-posts" aria-live="polite" aria-relevant="additions removals" tabindex="0"></ul>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

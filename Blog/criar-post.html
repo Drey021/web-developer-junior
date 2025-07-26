@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Criar Novo Post</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container" role="main" aria-labelledby="titulo-pagina">
+    <h2 id="titulo-pagina">Criar Novo Post</h2>
+    <form onsubmit="return criarPost()" novalidate>
+      
+      <div class="form-group">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" required aria-required="true" placeholder="Digite o título do post" />
+      </div>
+
+      <div class="form-group">
+        <label for="imagem">URL da Imagem:</label>
+        <input type="url" id="imagem" name="imagem" required aria-required="true" placeholder="https://exemplo.com/imagem.jpg" />
+      </div>
+
+      <div class="form-group">
+        <label for="descricao">Descrição (pode usar HTML):</label>
+        <textarea id="descricao" name="descricao" required aria-required="true" rows="6" placeholder="Escreva a descrição do post aqui..."></textarea>
+      </div>
+
+      <div class="botoes">
+        <button type="submit">Salvar</button>
+        <button type="button" onclick="window.location.href='gerenciar-posts.html'">Voltar</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
