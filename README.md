@@ -37,7 +37,6 @@ BLOG
 ├── style.css # Estilos principais (responsivo e moderno)
 └── script.js # Lógica em JavaScript (login, CRUD, busca)
 
-
 ---
 
 ## Como usar
@@ -58,7 +57,7 @@ BLOG
 
 - Projeto simples, sem backend real — dados ficam no navegador via `localStorage`.
 - Senha fixa e simples aqui apenas para fins educacionais.
-- 
+  
 ---
 
 ## Melhorias Futuras
